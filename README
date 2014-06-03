@@ -1,0 +1,29 @@
+============
+arch-get-old
+============
+
+Small bash script that downloads packages from a Arch Linux package archive.
+
+
+Why do I need this?
+===================
+
+$ sudo pacman -S lib32-qt4
+...
+error: failed retrieving file 'lib32-qt4-4.8.5-6-x86_64.pkg.tar.xz' from ... : The requested URL returned error: 404 Not Found
+...
+
+
+How do I use this?
+==================
+
+$ arch-get-old lib32-qt4-4.8.5-6-x86_64.pkg.tar.xz
+...
+2014-06-03 23:15:32 (1.25 MB/s) - ‘lib32-qt4-4.8.5-6-x86_64.pkg.tar.xz’ saved [20288576]
+...
+
+$ sudo pacman -U lib32-qt4-4.8.5-6-x86_64.pkg.tar.xz
+...
+(1/1) installing lib32-qt4                         [######################] 100%
+...
+
